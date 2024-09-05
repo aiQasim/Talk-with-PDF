@@ -95,11 +95,16 @@ def main():
                 st.error("Please upload at least one PDF file.")
             else:
                 with st.spinner("Processing"):
+                    print("get_pdf_text")
                     raw_text = get_pdf_text(pdf_docs)
+                    print("get_text_chunks")
                     text_chunks = get_text_chunks(raw_text)
+                    print("get_vectorstore")
                     vectorstore = get_vectorstore(text_chunks)
+                    print("get_conversation_chain")
                     st.session_state.conversation = get_conversation_chain(
                         vectorstore)
+                    print("success")
                     st.success("Your Data has been processed successfully")
 
     if user_question:
