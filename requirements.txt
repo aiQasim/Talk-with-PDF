@@ -8,10 +8,10 @@ faiss-cpu
 altair
 tiktoken
 matplotlib
-pycryptodome
+pycryptodome==3.15.0
 # uncomment to use huggingface llms
-huggingface-hub
+huggingface-hub==0.14.1
 
 # uncomment to use instructor embeddings
-InstructorEmbedding
+InstructorEmbedding==1.0.1
 sentence-transformers==2.2.2
