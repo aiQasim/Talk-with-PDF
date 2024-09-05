@@ -14,4 +14,4 @@ huggingface-hub
 
 # uncomment to use instructor embeddings
 InstructorEmbedding
-sentence-transformers
+sentence-transformers==2.2.2
