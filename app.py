@@ -37,7 +37,8 @@ def get_vectorstore(text_chunks):
     # embeddings = OpenAIEmbeddings()
     print("HuggingFaceInstructEmbeddings")
     model_kwargs = {'device': 'cpu', 'weights_only': True}
-    embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-xl", model_kwargs=model_kwargs)
+    # embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-xl", model_kwargs=model_kwargs)
+    embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-xl")
     print("FAISS.from_texts")
     vectorstore = FAISS.from_texts(texts=text_chunks, embedding=embeddings)
     print("returning vectorstore")
